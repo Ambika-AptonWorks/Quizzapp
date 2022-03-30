@@ -14,3 +14,15 @@ body,
   width: 100%;
   text-align: center;
 }
+label.radio{
+  display: block;
+  text-align:left;
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+label.radio input{
+  margin-right: 10px;
+}
+#btn{
+  margin-right: 3px;
+}
