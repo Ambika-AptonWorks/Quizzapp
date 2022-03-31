@@ -14,8 +14,9 @@ function App() {
   const [step,setStep]=useState(1)
   const[activeQuestions,setActiveQuestions]=useState(0)
   const [answers,setAnswers]=useState([]);
+  const[modal,setModal]=useState(false);
   const[time, setTime]=useState(0);
-  const[modal,setModal]=useState()
+ 
  
   useEffect(()=>{
     if(step === 3){
@@ -59,7 +60,8 @@ function App() {
     onAnswerscheck={()=>setModal(true)}
     time={time}
      />}
-     {setModal && <Checkanswers
+     {modal && <Checkanswers
+     onClose={()=>setModal(false)}
      results={answers} 
      data={quizdata.data} />}
   </div>

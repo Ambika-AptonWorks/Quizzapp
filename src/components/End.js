@@ -19,6 +19,7 @@ const End=({data, results, onReset, onAnswerscheck, time})=> {
         setCorrectAns (correct);
     },[]);
   return (
+
     <>
     <div className='card' ref={componentRef}>
         <div className='card-content'>
@@ -27,7 +28,7 @@ const End=({data, results, onReset, onAnswerscheck, time})=> {
                 <p>{correctAns} of {data.length}</p>
                 <p><strong>{Math.floor((correctAns/data.length) *100)}%</strong></p>
                 <p><strong>your time:</strong>{formatTime(time)}</p>
-                
+                <button className='btn btn-info' onClick={onAnswerscheck}>Checkanswers</button>
                 <button className='btn btn-success' onClick={onReset}>Try again!</button>
             </div>
             <button className='btn btn-warning container'onClick={handlePrint}>Print</button>
