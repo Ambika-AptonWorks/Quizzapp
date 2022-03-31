@@ -6,7 +6,7 @@
           "Answer":"npx create-react-app myyApp"
         },
         {
-            "Question":"a new React project?",
+            "Question":"What is the correct command to create a new React project?",
             "Choices":["npm create-react-app","npx create-react-app myyApp","npx create-react-app","npm create-react-app myyApp" ],
             "Answer":"npx create-react-app myyApp"
           },

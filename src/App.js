@@ -1,9 +1,12 @@
 import './App.css';
+import React,{useState,useEffect,useRef} from "react";
 import Start from './components/Start';
 import Questions from './components/Questions';
-import React,{useState,useEffect} from "react";
-import quizdata from "./data/quizz.json";
 import End from "./components/End";
+import Checkanswers from './components/Checkanswers';
+import quizdata from "./data/quizz.json";
+
+
 
 let interval;
 
@@ -11,8 +14,9 @@ function App() {
   const [step,setStep]=useState(1)
   const[activeQuestions,setActiveQuestions]=useState(0)
   const [answers,setAnswers]=useState([]);
-  const[time, setTime]=useState(0)
-
+  const[time, setTime]=useState(0);
+  const[modal,setModal]=useState()
+ 
   useEffect(()=>{
     if(step === 3){
       clearInterval(interval);
@@ -35,6 +39,7 @@ function App() {
       setTime(prevTime=> prevTime+1)
     },1000);
 
+    
   }
  return (
   <div className="App">
@@ -51,8 +56,12 @@ function App() {
     results={answers}
     data={quizdata.data}
     onReset={resetClickHandler}
-    onAnswerscheck={()=>{}}
-    time={time} />}
+    onAnswerscheck={()=>setModal(true)}
+    time={time}
+     />}
+     {setModal && <Checkanswers
+     results={answers} 
+     data={quizdata.data} />}
   </div>
   );
 }

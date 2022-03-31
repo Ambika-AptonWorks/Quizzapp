@@ -1,24 +1,25 @@
 html,
-body,
 #root {
   height:100%;
+  width:100%;
+}
+body{
+  height:auto;
+  width:auto;
 }
 .App{
-  display: flex;
-  align-items: center;
-  justify-content: center;
   min-height: 100%;
 }
-.App.card{
-  min-width: 400px;
-  width: 100%;
+.App{
+  min-width: 300px;
+  width: 50%;
   text-align: center;
 }
 label.radio{
   display: block;
   text-align:left;
-  margin-bottom: 5px;
-  font-size: 20px;
+  margin-bottom: 3px;
+  font-size: 15px;
 }
 label.radio input{
   margin-right: 10px;
@@ -26,3 +27,17 @@ label.radio input{
 #btn{
   margin-right: 3px;
 }
+.card{
+  width:400px;
+  height:270px;
+  text-align: center;
+  margin:150px 50px 50px 400px;
+  border:2px solid gray; 
+}
+.card button{
+  margin-top:7px;
+}
+#card1 h1{
+  margin-top:50px;
+}
+
